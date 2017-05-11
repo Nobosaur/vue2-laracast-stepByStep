@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@2.3.2/dist/vue.js"></script>
+        <style type="text/css">
+        .color-red {
+            color: #f00;
+        }
+        .is-loading {
+            background: #f0f;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div id="root">
+            <!--full version how to use Vue  bindint to attribute-->
+            <h1 :class="className">Hellow</h1>
+            <button v-on:click="addName" v-bind:title="imeUVue">Hover over me</button>
+            <br><br>
+            <!--fast version how to use Vue  bindint to attribute-->
+            <button :class="{ 'is-loading' : isLoading }" @click="toggleClass">Testing</button>
+            <button @click="addName" :title="imeUVue">Hover over me</button>
+        </div>
+
+        <script>
+
+        var app = new Vue({
+            el: "#root",
+            data: {
+                imeUVue: "Pogledaj me",
+                className: "color-red",
+                isLoading: false
+            },
+            methods: {
+                toggleClass() {
+                    this.isLoading = true;
+                } 
+            }
+        })
+        
+        </script>
+    </body>
+</html>
