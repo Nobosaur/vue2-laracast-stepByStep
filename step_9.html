@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@2.3.2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="container">
+        <tabs>
+            <tab name="First tab" :selected="true">
+                <h1>This is first tab</h1>
+            </tab>
+            <tab name="About us">
+                <h1>This is tab about us</h1>
+            </tab>
+            <tab name="home">
+                <h1>This is home tab</h1>
+            </tab>
+        </tabs>
+    </div>
+    <script src="js/step9Main.js"></script>
+
+</body>
+
+</html>
