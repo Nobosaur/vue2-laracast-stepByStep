@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@2.3.2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root" class="container">
+        <nk-coupon @coupon-was-applied="onCouponApplied"></nk-coupon>
+
+        <h1 v-show="couponApplied">You applied coupon</h1>
+    </div>
+    <script src="js/step10Main.js"></script>
+
+</body>
+
+</html>
